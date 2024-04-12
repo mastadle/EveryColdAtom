@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import json
 from time import sleep
 
+from simplekml import coordinates
+
 class GroupClass:
     defaults = {}
     defaults['name'] = ''
@@ -631,31 +633,118 @@ if 1:
     kml = simplekml.Kml(name="Every cold atom")
     with open(new_filename, 'r', encoding="utf-8") as f:
         f.readline()
+        atom_folder = kml.newfolder(name="Neutral Atoms")
+        atom_group_types=("Experiment", "Experiment/Theory", "Theory")
         style = {}
-        style["Experiment"] = simplekml.Style()
-        style["Experiment"].labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
-        style["Experiment"].labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
-        style["Experiment"].labelstyle.scale = 1.5
-        style["Experiment"].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'
-        style["Experiment"].iconstyle.scale = 1.5
-        style["Experiment/Theory"] = simplekml.Style()
-        style["Experiment/Theory"].labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
-        style["Experiment/Theory"].labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
-        style["Experiment/Theory"].labelstyle.scale = 1.5
-        style["Experiment/Theory"].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'
-        style["Experiment/Theory"].iconstyle.scale = 1.5
+        subfolders = {}
+        for type in atom_group_types:
+            style[type] = simplekml.Style()
+            style[type].labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
+            style[type].labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
+            style[type].labelstyle.scale = 1.5
+            style[type].iconstyle.scale = 1.5
+            if type == 'Experiment':
+                style[type].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'
+            elif type == 'Experiment/Theory':
+                style[type].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/purple-blank.png'
+            else:
+                style[type].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/orange-blank.png'
+            subfolders[type] = atom_folder.newfolder(name=type)
         for i, line in enumerate(f):
             a = GroupClass()
             #print(line)
             a.get_from_csv(line, sep=';')
-            if a.exp_theor == "Experiment" or a.exp_theor == "Experiment/Theory":
-                pnt = kml.newpoint(name=a.name,
-                        description=a.exp_theor,
-                        coords=[(a.long, a.lat)]
-                        )
-                pnt.style = style[a.exp_theor]
+            pnt = subfolders[a.exp_theor].newpoint(name=a.name,
+                    description=a.exp_theor,
+                    coords=[(a.long, a.lat)]
+                    )
+            pnt.style = style[a.exp_theor]
 
-    kml.save(new_filename[0:-4]+".kml")
+        kml.save(new_filename[0:-4]+".kml")
+
+ion_trap_filename = "IonTrappers.csv"
+import csv
+
+if 0:
+    import googlemaps
+    with open('gmapsAPIkey.txt', 'r') as f:
+        gmapsAPIkey = f.read().strip()
+    gmaps = googlemaps.Client(key=gmapsAPIkey)
+
+    with open(ion_trap_filename, 'r', encoding="utf-8-sig") as f:
+        reader = csv.reader(f, dialect="excel")
+        header = next(reader)
+        expected_headers = [
+                "",
+                "Country",
+                "State",
+                "City",
+                "Institution",
+                "Group",
+                "Head",
+                "Ions"
+                ]
+        print(header)
+        for c_idx, c in enumerate(header):
+            if (c != expected_headers[c_idx]):
+                raise KeyError("Unexpected header: " + c + ", expected " + expected_headers[c_idx])
+
+        ion_trappers = []
+        for i, row in enumerate(reader):
+            ion_trappers.append({})
+            for c_idx, c in enumerate(header):
+                ion_trappers[i][c] = row[c_idx]
+
+            print(ion_trappers[i])
+
+            """ Get location from address using Google Maps API. """
+            query = ', '.join([ion_trappers[i]["Institution"],ion_trappers[i]["Country"], ion_trappers[i]["City"]])
+
+            geocode_result = gmaps.geocode(query)
+            if len(geocode_result) == 0:
+                print("No results for "+query)
+            ion_trappers[i]["Lat"] = geocode_result[0]['geometry']['location']['lat']
+            ion_trappers[i]["Long"] = geocode_result[0]['geometry']['location']['lng']        
+
+        expected_headers.append("Lat")
+        expected_headers.append("Long")
+
+        with open(ion_trap_filename[0:-4]+"_geocode.csv", 'w') as out_f:
+            writer = csv.writer(out_f, dialect="excel")
+            writer.writerow(expected_headers)
+            for ion_trapper in ion_trappers:
+                writer.writerow(ion_trapper.values())
+
+if 1:
+    import simplekml
+    kml = simplekml.Kml(name="Trapped Ions")
+    with open(ion_trap_filename[:-4]+"_geocode.csv", 'r', encoding="utf-8") as f:
+        reader = csv.reader(f, dialect="excel")
+        header = next(reader)
+        ion_folder = kml.newfolder(name="Trapped Ions")
+        style = simplekml.Style()
+        style.labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
+        style.labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
+        style.labelstyle.scale = 1.5
+        style.iconstyle.scale = 1.5
+        style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/pink-blank.png'
+        sep = ','
+        for i, row in enumerate(reader):
+            ion_trapper = {}
+            for c_idx, c in enumerate(row):
+                ion_trapper[header[c_idx]] = c
+            pnt = ion_folder.newpoint(name=ion_trapper["Group"],
+                    description=ion_trapper["Ions"],
+                    coords=[(ion_trapper["Long"], ion_trapper["Lat"])]
+                    )
+            pnt.style = style
+
+        kml.save(ion_trap_filename[:-4]+".kml")
+
+
+
+
+
 
     
 """
