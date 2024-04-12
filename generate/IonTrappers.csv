@@ -1,0 +1,117 @@
+﻿,Country,State,City,Institution,Group,Head,Ions
+1,Argentina,,Buenos Aires,University of Buenos Aires,Laboratory of Cold Ions and Atoms,Christian Schmiegelow,Ca+
+2,Australia,New South Wales,Sydney,University of Sydney,Quantum Control Laboratory,Mike Biercuk,"Be+, Yb+"
+3,Australia,Queensland,Brisbane,Griffith University,Ion-trap Quantum Computing Laboratory,"Eric Streed, Mirko Lobino",Yb+
+4,Austria,,Innsbruck,University of Innsbruck,Quantum Optics and Spectroscopy,Rainer Blatt,"Al+, Ba+, Ca+, Sr+"
+5,Austria,,Innsbruck,University of Innsbruck,Quantum Interfaces Group,Tracy Northup,Ca+
+6,Austria,,Innsbruck,[Company],AQT,Thomas Monz,Ca+
+7,Austria,,Villach,[Company],Infineon Technologies,Clemens Rössler,Ca+
+8,Canada,British Columbia,Burnaby,Simon Fraser University,Haljan Group,Paul Haljan,Yb+
+9,Canada,Ontario,Ottawa,NRC,Measurement science and standards,"John Bernard, Alan Madej",Sr+
+10,Canada,Ontario,Waterloo,"IQC, University of Waterloo",Quantum Information with Trapped Ions,K. Rajibul Islam,"Ba+, Yb+"
+11,Canada,Ontario,Waterloo,"IQC, University of Waterloo",Crystal Senko Group,Crystal Senko,Ba+
+12,China,Anhui,Hefei,University of Science and Technology of China,Key Laboratory of Quantum Informat,Guang-Can Guo,Yb+
+13,China,Anhui,Hefei,University of Science and Technology of China,Key Laboratory of Microscale Magnetic Resonance,"Jiangfeng Du, Yiheng Lin","Be+, Ca+, CaH+"
+14,China,Beijing,Beijing,Tsinghua University,Center for Quantum Information,Kihwan Kim,"Ba+, Yb+"
+15,China,Beijing,Beijing,Tsinghua University,Center for Quantum Information,Luming Duan,"Ca+, Yb+"
+16,China,Beijing,Beijing,Tsinghua University,Joint institute for Measurement Science,Li-Jun Wang,"Ba+, Cd+, In+"
+17,China,Hubei,Wuhan,Huazhong University of Science and Technology,MOE Key Laboratory,Ze-Huang Lu,"Al+, Mg+"
+18,China,Hubei,Wuhan,Wuhan Institute of Physics and Mathematics,Ion Optical Frequency Standard,Xue-Ren Huang,"Al+, Ca+"
+19,China,Hubei,Wuhan,Wuhan Institute of Physics and Mathematics,Mercury Ion Microwave Frequency Standard,Jiaomei Li,Hg+
+20,China,Hubei,Wuhan,Wuhan Institute of Physics and Mathematics,Quantum Information and Trapped Ion Physics,Mang Feng,Ca+
+21,China,Hubei,Wuhan,Wuhan Institute of Physics and Mathematics,Trapping of Cold Ions,Ke-Lin Gao,"Ca+, Li+"
+22,China,Hunan,Changsha,National University of Defense Technology,Department of Physics,Pingxing Chen,Ca+
+23,Czech Republic,,Olomouc & Brno,Palacký University & ISI,Quantum Optics Lab,"Radim Filip, Lukáš Slodička",Ca+
+24,Denmark,,Aarhus,Aarhus University,Ion Trap Group,Michael Drewsen,"Ca+, molecular ions"
+25,Finland,,Helsinki,Aalto University,MIKES Time and Frequency Group,Mikko Merimaa,Sr+
+26,France,,Besançon,FEMTO-ST,Compact Optical Atomic Clock,Clément Lacroûte,Yb+
+27,France,,Marseille,Aix-Marseille University,Ion Trapping and Laser Manipulation Group,"Martina Knoop, Caroline Champenois",Ca+
+28,France,,Paris,LKB,Trapped Ions Group,Laurent Hilico,H2+
+29,France,,Paris,Université Paris Diderot,Trapped Ions and Quantum Information,"Luca Guidoni, Samuel Guibal",Sr+
+30,Germany,,Bonn,University of Bonn,Experimental Quantum Physics,Michael Köhl,Yb+
+31,Germany,,Braunschweig,PTB,Quantum Logic Spectroscopy Group,Piet Schmidt,"Al+, Ca+, Mg+, Be+, molecular ions"
+32,Germany,,Braunschweig,PTB,Multi-Ion Clocks,Tanja Mehlstäubler,"In+, Yb+"
+33,Germany,,Braunschweig,PTB,Trapped-Ion Quantum Engineering,Christian Ospelkaus,Be+
+34,Germany,,Braunschweig,PTB,Optical Clocks with Trapped Ions,Nils Huntemann,"Yb+, Sr+"
+35,Germany,,Braunschweig,PTB,Laser Nuclear Spectroscopy,Ekkehard Peik,Th+
+36,Germany,,Düsseldorf,University of Düsseldorf,Quantum Optics and Relativity,Stephan Schiller,"Be+, HD+"
+37,Germany,,Erlangen,MPI for the Science of Light,Leuchs Division,Gerd Leuchs,Yb+
+38,Germany,,Freiburg,University of Freiburg,Schaetz Division,Tobias Schaetz,"Ba+, Mg+"
+39,Germany,,Garching,MPQ,Trapped Ions Group,"Thomas Udem, Ted Hänsch","Be+, Mg+"
+40,Germany,,Hannover,Leibniz University,Trapped-Ion Quantum Engineering,Christian Ospelkaus,Be+
+41,Germany,,Heidelberg,MPI für Kernphysik,Highly Charged Ion Dynamics,José Ramon Crespo López-Urrutia,"Be+, highly charged ions"
+42,Germany,,Kassel,University of Kassel,Light-matter interaction,Kilian Singer,Ca+
+43,Germany,,Mainz,Mainz University,Cold Ions and Experimental Quantum Information,Ferdinand Schmidt-Kaler,"Ca+, Sr+"
+44,Germany,,Saarbrücken,Saarland University,Quantum Photonics Group,Jürgen Eschner,Ca+
+45,Germany,,Siegen,University of Siegen,Quantum Optics Research Group,Christof Wunderlich,Yb+
+46,Germany,,Ulm,Ulm University,Institute of Quantum Matter,Johannes Hecker Denschlag,"Ba+, Rb+"
+47,India,,Bangalore,Raman Research Institute,Quantum Interactions,Sadiq Rangwala,Rb+
+48,Israel,,Rehovot,Weizmann Institute,Trapped-Ions Lab,Roee Ozeri,Sr+
+49,Israel,,Rehovot,Weizmann Institute,Molecular Physics Group,Daniel Zajfman,Molecular ions
+50,Israel,,Rehovot,Weizmann Institute,Molecular Qubits Laboratory,Ziv Meir,Molecular ions
+51,Italy,,Florence,University of Florence,Atom-Ion Florence,Carlo Sias,Ba+
+52,Japan,,Kobe,NICT,Quantum ICT Laboratory,Kazuhiro Hayasaka,"Ca+, In+"
+53,Japan,,Kyoto,Kyoto University,Quantum Optical Engineering,Masao Kitano,Yb+
+54,Japan,,Okinawa,Okinawa Institute of Science and Technology Graduat,Experimental Quantum Information Physics (EQuIP) unit,Hiroki Takahashi,"Ca+, Ba+"
+55,Japan,,Osaka,Osaka University,Mukaiyama Laboratory,Takashi Mukaiyama,"Ca+, In+"
+56,Japan,,Osaka,Osaka University,QIP using trapped ions (Toyoda Group),Kenji Toyoda,Ca+
+57,Japan,,Osaka,Osaka University,Tanaka Group,Utako Tanaka,Ca+
+58,Japan,,Tokyo,The University of Tokyo,Noguchi Laboratory,Atsushi Noguchi,Be+
+59,Japan,,Tokyo,University of Tokyo,Hasegawa Laboratory,Shuichi Hasegawa,Ca+
+60,Netherlands,,Amsterdam,University of Amsterdam,Hybrid atom-ion Quantum Systems,Rene Gerritsma,Yb+
+61,Netherlands,,Amsterdam,VU Amsterdam,HD+ spectroscopy team,Jeroen Koelemeij,"Be+, HD+"
+62,Netherlands,,Amsterdam,VU Amsterdam,Ultrafast Laser Physics and Precision Metrology Group,Kjeld Eikema,Ca+
+63,Netherlands,,Groningen,University of Groningen,Research Group Ions,Klaus Jungmann,"Ba+, Ra+"
+64,Singapore,,Singapore,CQT,Microtraps Group,Murray Barrett,"Ba+, Lu+"
+65,Singapore,,Singapore,CQT,Trapped molecular ions,Dzmitry Matsukevich,"Yb+, SiO+"
+66,Singapore,,Singapore,CQT,Cold Ion Group,Manas Mukherjee,Ba+
+67,South Africa,,Stellenbosch,Stellenbosch University,Trapped Ion Quantum Control,Hermann Uys,Yb+
+68,South Korea,,Pohang,Pohang University of Science and Technology,Quantum Computing and Quantum Network,Moonjoo Lee,Yb+
+69,South Korea,,Seoul,Ewha Womans University,Trapped Ion Quantum Computing Lab,Taeyoung Choi,Yb+
+70,South Korea,,Seoul,Seoul National University,Nano/Micro system & controls Lab,Dan Cho,Yb+
+71,South Korea,,Seoul,Seoul National University,Quantum Information and Quantum Computing Lab,Taehyun Kim,Yb+
+72,South Korea,,Suwon,Sungkyunkwan University,Quantum Engineering with Trapped Ions,Junki Kim,"Yb+, Ba+"
+73,Spain,,Granada,Universidad de Granada,Molecules Atoms Ions Nuclei,Daniel Rodríguez,Ca+
+74,Sweden,,Stockholm,Stockholm University,Trapped Ion Quantum Technologies,Markus Hennrich,Sr+
+75,Switzerland,,Basel,University of Basel,Willitsch Group,Stefan Willitsch,"Ca+, molecular ions"
+76,Switzerland,,Villigen,Paul Scherrer Institut,Ion Trap Quantum Computing,Cornelius Hempel,Ca+
+77,Switzerland,,Zurich,ETH,Trapped Ion Quantum Information,Jonathan Home,"Be+, Ca+"
+78,United Kingdom,,Brighton,University of Sussex,Ion Quantum Technology Group,Winni Hensinger,Yb+
+79,United Kingdom,,Brighton,University of Sussex,ITCM Group,Matthias Keller,"Ca+, N2+"
+80,United Kingdom,,London,Imperial College,Ion Trapping Group,Richard Thompson,Ca+
+81,United Kingdom,,Oxford,University of Oxford,Ion Trap Quantum Computing Group,"David Lucas, Andrew Steane","Ca+, Sr+"
+82,United Kingdom,,Oxford,University of Oxford,Softley Research Group,Tim Softley,"Ca+, molecular ions"
+83,United Kingdom,,Teddington,NPL,Strontium Ion Optical Frequency Standard,"Alastair Sinclair, Patrick Gill",Sr+
+84,United Kingdom,,Teddington,NPL,Ytterbium Ion Optical Frequency Standard,Rachel Godun,Yb+
+85,USA,California,Berkeley,UC Berkeley,Ion Trap Group,Hartmut Häffner,Ca+
+86,USA,California,Los Angeles,UCLA,Hudson Lab,Eric Hudson,"Ba+, Yb+, molecular ions"
+87,USA,California,Los Angeles,UCLA,Campbell Lab,Wes Campbell,Yb+
+88,USA,Colorado,Boulder,NIST,Ion Storage Group,John Bollinger,"Al+, Be+, Ca+, Hg+, Mg+, molecular ions"
+89,USA,Colorado,Broomfield,[Company],Honeywell Quantum Solutions,Tony Uttley,"Yb+, Ba+"
+90,USA,Connecticut,Storrs,University of Connecticut,Atomic and Molecular Spectroscopy Group,Winthrop Smith,"Ca+, Na+, Rb+, molecular ions"
+91,USA,Georgia,Atlanta,Georgia Tech,Chapman Research Lab,Michael Chapman,"Ba+, Th3+, molecular ions"
+92,USA,Georgia,Atlanta,GTRI,Quantum Systems group,Robert Wyllie,"Ca+, Yb+, Sr+"
+93,USA,Illinois,Evanston,Northwestern University,Molecular Ion and Atom Trapping Group,Brian Odom,"Ba+, molecular ions"
+94,USA,Indiana,Bloomington,Indiana University,Richerme Lab,Phil Richerme,Yb+
+95,USA,Maryland,UMD College Park,"Army Research Lab, JQI",Quraishi Group,Qudsia Quraishi,Ba+
+96,USA,Maryland,UMD College Park,"Army Research Lab, JQI",Trapped Ion Lab,Joe Britton,"Yb+, Ba+"
+97,USA,Maryland,UMD College Park,[Company],IonQ,"Peter Chapman, Jungsang Kim, Chris Monroe",Yb+
+98,USA,Massachusetts,Amherst,Amherst College,Hanneke Ion Trap Lab,David Hanneke,Be+
+99,USA,Massachusetts,Cambridge,MIT Center for Ultracold Atoms,Experimental Atomic Physics Group,Vladan Vuletic,Yb+
+100,USA,Massachusetts,Cambridge,MIT Center for Ultracold Atoms,Quanta Group,Ike Chuang,Sr+
+101,USA,Massachusetts,Lexington,MIT Lincoln Laboratory,Lincoln Laboratory,John Chiaverini,"Ca+, Sr+"
+102,USA,Massachusetts,Williamstown,Williams College,Doret Group,Charlie Doret,Ca+
+103,USA,New Mexico,Albuquerque,Sandia National Labs,"Microsystems Engineering, Science and Applications (MESA)",Dan Stick,"Ca+, Yb+"
+104,USA,New York,New York,New York University,Precisely Quantum,Jiehang Zhang,Be+
+105,USA,North Carolina,Durham,Duke University,Brown Lab,Kenneth Brown,"Ca+, Yb+, B+, molecular ions"
+106,USA,North Carolina,Durham,Duke University,Trapped Ion Quantum Information,Chris Monroe,"Ba+, Yb+"
+107,USA,North Carolina,Durham,Duke University,Cetina Lab,Marko Cetina,Yb+
+108,USA,North Carolina,Durham,Duke University,Noel Lab,Crystal Noel,Ca+
+109,USA,North Carolina,Durham,Duke University,Linke Lab,Norbert Linke,"Yb+, Sr+"
+110,USA,North Carolina,Durham,Duke University,MIST Group,Jungsang Kim,"Ba+, Yb+"
+111,USA,Ohio,Granville,Denison University,Ion Quantum Optics,Steven Olmschenk,Ba+
+112,USA,Oregon,Eugene,University of Oregon,Oregon Ions,"David Allcock, Dave Wineland",Ca+
+113,USA,Texas,Houston,Rice University,Quantum Simulation Lab,Guido Pagano,Yb+
+114,USA,Vermont,Middlebury,Middlebury College,Ion Trapping Lab,Paul Hess,Yb+
+115,USA,Washington,Seattle,University of Washington,Scalable Quantum Research Lab,Sara Mouradian,Ca+
+116,USA,Washington,Seattle,University of Washington,Trapped Ion Quantum Computing,Boris Blinov,"Ba+, Yb+"
