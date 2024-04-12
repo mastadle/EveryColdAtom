@@ -82,7 +82,7 @@ class GroupClass:
         if len(fields) == 0:
             self.fields = GroupClass.defaults['fields']
         else:
-            self.fields = fields[0].text.strip().replace(';', ',,').replace('\n', '        ')
+            self.fields = fields[0].text.strip().replace(';', ',,').replace('\n', '        ').replace('\r', '')
             # Replacements are maybe not necessary, but needed for backwards compatibility.
 
         people = thediv.find_all("span", {"class": "people"})
@@ -488,11 +488,11 @@ if 0: # OBSOLETE load all from ucan OBSOLETE
     url = 'https://ucan.physics.utoronto.ca/Groups/group.2005-07-11.4942545460/view'
     #b = a.get_from_utoronto(url)
 
-new_filename = 'ucan_utoronto_database_test20220704.csv'
+new_filename = 'ucan_utoronto_database_test20240410.csv'
 print("New filename", new_filename)
 # update this filename to the last version of the file
 if 0: # load all from ucan. RUN THIS FIRST
-    do_geocode = False
+    do_geocode = True
     if do_geocode:
         import googlemaps
         with open('gmapsAPIkey.txt', 'r') as f:
@@ -525,7 +525,7 @@ if 0: # load all from ucan. RUN THIS FIRST
                 a.geocode(gmaps)
             f.write(a.csv())
             #print(1/0)
-            sleep(5)
+            # sleep(5)
 
 if 1:
     # Calculate diff
@@ -625,6 +625,38 @@ if 0: # generate checkboxes
     basestr = """<label><input type='checkbox' onclick='handleClick(this);' name="incheckbox" value="{:}" checked>{:}</label>"""
     for i in elements:
         print(basestr.format(i, i))
+
+if 1:
+    import simplekml
+    kml = simplekml.Kml(name="Every cold atom")
+    with open(new_filename, 'r', encoding="utf-8") as f:
+        f.readline()
+        style = {}
+        style["Experiment"] = simplekml.Style()
+        style["Experiment"].labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
+        style["Experiment"].labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
+        style["Experiment"].labelstyle.scale = 1.5
+        style["Experiment"].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'
+        style["Experiment"].iconstyle.scale = 1.5
+        style["Experiment/Theory"] = simplekml.Style()
+        style["Experiment/Theory"].labelstyle.color = simplekml.Color.rgb(33, 59, 109)  # Make the text Qendra blue
+        style["Experiment/Theory"].labelstyle.color = simplekml.Color.rgb(226, 111, 56)  # Make the text Qendra orange
+        style["Experiment/Theory"].labelstyle.scale = 1.5
+        style["Experiment/Theory"].iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/paddle/blu-blank.png'
+        style["Experiment/Theory"].iconstyle.scale = 1.5
+        for i, line in enumerate(f):
+            a = GroupClass()
+            #print(line)
+            a.get_from_csv(line, sep=';')
+            if a.exp_theor == "Experiment" or a.exp_theor == "Experiment/Theory":
+                pnt = kml.newpoint(name=a.name,
+                        description=a.exp_theor,
+                        coords=[(a.long, a.lat)]
+                        )
+                pnt.style = style[a.exp_theor]
+
+    kml.save(new_filename[0:-4]+".kml")
+
     
 """
 How to convert csv to excel.
